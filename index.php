@@ -33,10 +33,10 @@ require_once "./Models/db.php";
     
     <div class="container-fluid text-center">
 
-        <h1 class="border-bottom pb-3 pt-3">Shop Online Per Animali</h1>
+        <h1 class="pt-4">Shop Online Per Animali</h1>
         
 
-        <h2>Cane</h2>
+        <h2 class="border-top mt-4 pt-3 pb-3">Prodotti per Cani</h2>
 
         <div class="d-flex gap-4 flex-wrap">
 
@@ -44,15 +44,14 @@ require_once "./Models/db.php";
                 foreach($dogsProduct as $singleProduct) {
                     ?>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?php echo $singleProduct->imgString ?>" class="" alt="..." style="height:200px; object-fit:contain">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $singleProduct->title ?></h5>
                             <p class="card-text"><?php echo $singleProduct->desc ?></p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Categoria: <strong><?php echo $singleProduct->type ?></strong></li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">Prezzo: <?php echo $singleProduct->price ?>€</li>
+                            <li class="list-group-item">Prezzo: <strong><?php echo $singleProduct->price ?>€</strong></li>
                         </ul>
                         <div class="card-body">
                             Categoria: <a href="#" class="card-link"><?php echo $singleProduct->icon ?></a>
@@ -66,7 +65,7 @@ require_once "./Models/db.php";
 
 
 
-        <h2 class="border-top mt-5 pt-3 pb-3">Gatto</h2>
+        <h2 class="border-top mt-5 pt-3 pb-3">Prodotti per Gatti</h2>
 
         <div class="d-flex gap-4 flex-wrap">
 
@@ -74,15 +73,14 @@ require_once "./Models/db.php";
                 foreach($catsProduct as $singleProduct) {
                     ?>
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                    <img src="<?php echo $singleProduct->imgString ?>" class="" alt="..." style="height:200px; object-fit:contain">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $singleProduct->title ?></h5>
                             <p class="card-text"><?php echo $singleProduct->desc ?></p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Categoria: <strong><?php echo $singleProduct->type ?></strong></li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">Prezzo: <?php echo $singleProduct->price ?>€</li>
+                            <li class="list-group-item">Prezzo: <strong><?php echo $singleProduct->price ?>€</strong></li>
                         </ul>
                         <div class="card-body">
                             Categoria: <a href="#" class="card-link"><?php echo $singleProduct->icon ?></a>
