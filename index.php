@@ -53,7 +53,7 @@ require_once "./Models/db.php";
                             <?php
                                 if($singleProduct->type == "Alimentazione") {
                                     ?>
-                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $dogDiet->expiration_data ?></strong></li>
+                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
                                     <?php
                                 }
                             ?>
@@ -89,7 +89,7 @@ require_once "./Models/db.php";
                             <?php
                                 if($singleProduct->type == "Alimentazione") {
                                     ?>
-                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $catDiet->expiration_data ?></strong></li>
+                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
                                     <?php
                                 }
                             ?>

@@ -8,6 +8,7 @@ class Product {
     public $price;
     public $desc;
     public $category;
+    public $expiration_data;
 
     function __construct(string $type, string $imgString, string $title, string $price, string $desc, string $category) {
         $this->type = $type;
