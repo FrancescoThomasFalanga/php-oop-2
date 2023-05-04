@@ -12,8 +12,13 @@ require_once "./Models/DogExtend.php";
 // All Cat extends Product, for adding their ICON
 require_once "./Models/CatExtend.php";
 
+// This contains all property of PRODUCT and DOGEXTEND or CATEXTEND
+require_once "./Models/CatDiet.php";
+require_once "./Models/DogDiet.php";
+
 // DB that Contains all the Product
 require_once "./Models/db.php";
+
 
 ?>
 
@@ -51,6 +56,13 @@ require_once "./Models/db.php";
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Categoria: <strong><?php echo $singleProduct->type ?></strong></li>
+                            <?php
+                                if($singleProduct->type == "Alimentazione") {
+                                    ?>
+                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
+                                    <?php
+                                }
+                            ?>
                             <li class="list-group-item">Prezzo: <strong><?php echo $singleProduct->price ?>€</strong></li>
                         </ul>
                         <div class="card-body">
@@ -80,6 +92,13 @@ require_once "./Models/db.php";
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Categoria: <strong><?php echo $singleProduct->type ?></strong></li>
+                            <?php
+                                if($singleProduct->type == "Alimentazione") {
+                                    ?>
+                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
+                                    <?php
+                                }
+                            ?>
                             <li class="list-group-item">Prezzo: <strong><?php echo $singleProduct->price ?>€</strong></li>
                         </ul>
                         <div class="card-body">
