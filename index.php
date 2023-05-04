@@ -6,12 +6,6 @@
 // All Product with their COMMON TYPE
 require_once "./Models/Product.php";
 
-// All Dog extends Product, for adding their ICON
-require_once "./Models/DogExtend.php";
-
-// All Cat extends Product, for adding their ICON
-require_once "./Models/CatExtend.php";
-
 // This contains all property of PRODUCT and DOGEXTEND or CATEXTEND
 require_once "./Models/CatDiet.php";
 require_once "./Models/DogDiet.php";
@@ -59,14 +53,14 @@ require_once "./Models/db.php";
                             <?php
                                 if($singleProduct->type == "Alimentazione") {
                                     ?>
-                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
+                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $dogDiet->expiration_data ?></strong></li>
                                     <?php
                                 }
                             ?>
                             <li class="list-group-item">Prezzo: <strong><?php echo $singleProduct->price ?>€</strong></li>
                         </ul>
                         <div class="card-body">
-                            Categoria: <a href="#" class="card-link"><?php echo $singleProduct->icon ?></a>
+                            Categoria: <a href="#" class="card-link"><?php echo $singleProduct->getIcon() ?></a>
                         </div>
                     </div>
                     <?php
@@ -95,14 +89,14 @@ require_once "./Models/db.php";
                             <?php
                                 if($singleProduct->type == "Alimentazione") {
                                     ?>
-                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
+                                    <li class="list-group-item">Data Di Scadenza: <strong><?php echo $catDiet->expiration_data ?></strong></li>
                                     <?php
                                 }
                             ?>
                             <li class="list-group-item">Prezzo: <strong><?php echo $singleProduct->price ?>€</strong></li>
                         </ul>
                         <div class="card-body">
-                            Categoria: <a href="#" class="card-link"><?php echo $singleProduct->icon ?></a>
+                            Categoria: <a href="#" class="card-link"><?php echo $singleProduct->getIcon() ?></a>
                         </div>
                     </div>
                     <?php
