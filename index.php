@@ -6,9 +6,11 @@
 // All Product with their COMMON TYPE
 require_once "./Models/Product.php";
 
-// This contains all property of PRODUCT and DOGEXTEND or CATEXTEND
-require_once "./Models/CatDiet.php";
-require_once "./Models/DogDiet.php";
+// This contains all property of PRODUCT + diet
+require_once "./Models/Diet.php";
+
+// This contains all property of PRODUCT + accessory
+require_once "./Models/Accessory.php";
 
 // DB that Contains all the Product
 require_once "./Models/db.php";
@@ -55,6 +57,10 @@ require_once "./Models/db.php";
                                     ?>
                                     <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
                                     <?php
+                                } else if($singleProduct->type == "Accessori") {
+                                    ?>
+                                    <li class="list-group-item">Dimensioni: <strong><?php echo $singleProduct->size ?></strong></li>
+                                    <?php
                                 }
                             ?>
                             <li class="list-group-item">Prezzo: <strong><?php echo $singleProduct->price ?>€</strong></li>
@@ -90,6 +96,10 @@ require_once "./Models/db.php";
                                 if($singleProduct->type == "Alimentazione") {
                                     ?>
                                     <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
+                                    <?php
+                                } else if($singleProduct->type == "Accessori") {
+                                    ?>
+                                    <li class="list-group-item">Dimensioni: <strong><?php echo $singleProduct->size ?></strong></li>
                                     <?php
                                 }
                             ?>

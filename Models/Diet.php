@@ -1,6 +1,6 @@
 <?php
 
-class CatDiet extends Product {
+class Diet extends Product {
 
     public $expiration_data;
 
