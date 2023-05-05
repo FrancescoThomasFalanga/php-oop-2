@@ -1,6 +1,11 @@
 <?php
 
+// REQUIRE Weight Trait
+require_once __Dir__ . "/../Traits/Weight.php";
+
 class Accessory extends Product {
+
+    use Weight;
 
     public $size;
 

@@ -1,6 +1,11 @@
 <?php
 
+// REQUIRE Weight Trait
+require_once __DIR__ . "/../Traits/Weight.php";
+
 class Diet extends Product {
+
+    use Weight;
 
     public $expiration_data;
 
