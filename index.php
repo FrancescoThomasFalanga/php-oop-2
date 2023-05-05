@@ -53,11 +53,11 @@ require_once "./Models/db.php";
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Categoria: <strong><?php echo $singleProduct->type ?></strong></li>
                             <?php
-                                if($singleProduct->type == "Alimentazione") {
+                                if($singleProduct->type == "Alimentazione" || $singleProduct->type == "Snack") {
                                     ?>
                                     <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
                                     <?php
-                                } else if($singleProduct->type == "Accessori") {
+                                } else if($singleProduct->type == "Accessori" || $singleProduct->type == "Gioco") {
                                     ?>
                                     <li class="list-group-item">Dimensioni: <strong><?php echo $singleProduct->size ?></strong></li>
                                     <?php
@@ -79,7 +79,7 @@ require_once "./Models/db.php";
 
         <h2 class="border-top mt-5 pt-3 pb-3">Prodotti per Gatti</h2>
 
-        <div class="d-flex gap-4 flex-wrap">
+        <div class="d-flex gap-4 flex-wrap mb-5">
 
             <?php
                 foreach($catsProduct as $singleProduct) {
@@ -93,11 +93,11 @@ require_once "./Models/db.php";
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Categoria: <strong><?php echo $singleProduct->type ?></strong></li>
                             <?php
-                                if($singleProduct->type == "Alimentazione") {
+                                if($singleProduct->type == "Alimentazione" || $singleProduct->type == "Snack") {
                                     ?>
                                     <li class="list-group-item">Data Di Scadenza: <strong><?php echo $singleProduct->expiration_data ?></strong></li>
                                     <?php
-                                } else if($singleProduct->type == "Accessori") {
+                                } else if($singleProduct->type == "Accessori" || $singleProduct->type == "Gioco") {
                                     ?>
                                     <li class="list-group-item">Dimensioni: <strong><?php echo $singleProduct->size ?></strong></li>
                                     <?php
