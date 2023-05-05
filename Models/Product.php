@@ -8,8 +8,15 @@ class Product {
     public $price;
     public $desc;
     public $category;
-    public $expiration_data;
-    public $size;
+
+
+    // l'estensione INTELLIPHENSE li mostra come errori nell'Index.PHP, quindi in via di sviluppo per evitare che me li mostrasse come errori
+    // ho tolto il commento (ho letto in più forum questo fatto dell'errore e a molti hanno consigliato persino di disattivare gli errori che mostra)
+    // in quanto L'estensione è indietro rispetto agli aggiornamenti di PHP...
+
+    // public $expiration_data;
+    // public $size;
+    // public $weight;
 
     function __construct(string $type, string $imgString, string $title, string $price, string $desc, string $category) {
         $this->type = $type;
